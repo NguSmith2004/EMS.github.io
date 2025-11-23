@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Employees - EMS</title>
+<link rel="stylesheet" href="employees.css">
+</head>
+<body>
+<!-- Add in layout.html or each page -->
+<button id="menuToggle" class="menu-toggle">☰</button>
+
+<div class="container">
+    <aside class="sidebar">
+        <h2>EMS</h2>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="employees.html" class="active">Employees</a>
+            <a href="add_employee.html">Add Employee</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="payroll.html">Payroll</a>
+            <a href="departments.html">Departments</a>
+            <a href="reports.html">Reports</a>
+            <a href="profile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+            <a href="#" id="logoutBtn" class="logout">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <h1>Employees</h1>
+        <input type="text" id="searchInput" placeholder="Search by name or username">
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+</div>
+
+<script src="employees.js"></script>
+</body>
+</html>

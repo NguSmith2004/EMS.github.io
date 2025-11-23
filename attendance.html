@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Attendance - EMS</title>
+<link rel="stylesheet" href="attendance.css">
+<link rel="stylesheet" href="global-layout.css"> <!-- global sidebar/nav styles -->
+</head>
+<body>
+    <!-- Add in layout.html or each page -->
+<button id="menuToggle" class="menu-toggle">☰</button>
+
+<div class="container">
+<aside class="sidebar">
+<h2>EMS</h2>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="employees.html">Employees</a>
+<a href="add_employee.html">Add Employee</a>
+<a href="attendance.html" class="active">Attendance</a>
+<a href="payroll.html">Payroll</a>
+<a href="departments.html">Departments</a>
+<a href="reports.html">Reports</a>
+<a href="profile.html">Profile</a>
+<a href="settings.html">Settings</a>
+<a href="#" id="logoutBtn" class="logout">Logout</a>
+</nav>
+</aside>
+
+<main class="main-content">
+<h1>Attendance</h1>
+<table id="attendanceTable">
+<thead>
+<tr><th>Name</th><th>Date</th><th>Status</th><th>Actions</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+<button id="markAllPresent">Mark All Present Today</button>
+</main>
+</div>
+<script src="attendance.js"></script>
+</body>
+</html>

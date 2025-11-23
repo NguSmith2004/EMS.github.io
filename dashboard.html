@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - EMS</title>
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+<body>
+<!-- Add in layout.html or each page -->
+<button id="menuToggle" class="menu-toggle">☰</button>
+
+<div class="container">
+    <aside class="sidebar">
+        <h2>EMS</h2>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="employees.html">Employees</a>
+            <a href="add_employee.html">Add Employee</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="payroll.html">Payroll</a>
+            <a href="departments.html">Departments</a>
+            <a href="reports.html">Reports</a>
+            <a href="profile.html">Profile</a>
+            <a href="settings.html" class="logout">Settings</a>
+            <a href="#" id="logoutBtn" class="logout">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <h1>Dashboard</h1>
+        <div class="cards">
+            <div class="card"><h3>Total Employees</h3><p id="totalEmployees">0</p></div>
+            <div class="card"><h3>Active Staff</h3><p id="activeStaff">0</p></div>
+            <div class="card"><h3>Departments</h3><p>5</p></div>
+        </div>
+        <canvas id="employeeChart"></canvas>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

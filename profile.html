@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profile - EMS</title>
+<link rel="stylesheet" href="global-layout.css"> <!-- sidebar + layout -->
+<link rel="stylesheet" href="profile.css"> <!-- page-specific styles -->
+</head>
+<body>
+    <!-- Add in layout.html or each page -->
+<button id="menuToggle" class="menu-toggle">☰</button>
+
+<div class="container">
+<aside class="sidebar">
+    <h2>EMS</h2>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="employees.html">Employees</a>
+        <a href="add_employee.html">Add Employee</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="payroll.html">Payroll</a>
+        <a href="departments.html">Departments</a>
+        <a href="reports.html">Reports</a>
+        <a href="profile.html" class="active">Profile</a>
+        <a href="settings.html">Settings</a>
+        <a href="#" id="logoutBtn" class="logout">Logout</a>
+    </nav>
+</aside>
+
+<main class="main-content">
+<h1>My Profile</h1>
+
+<div class="profile-container">
+    <div class="profile-left">
+        <div class="profile-pic">
+            <img id="profileImg" src="default-profile.png" alt="Profile Picture">
+            <input type="file" id="imgUpload" accept="image/*" style="display:none;">
+            <button id="changePicBtn">Change Picture</button>
+        </div>
+
+        <!-- Quick Stats Cards -->
+        <div class="profile-stats">
+            <div class="stat-card">
+                <h3 id="statAttendance">0</h3>
+                <p>Days Present</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="statProjects">0</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="statLeave">0</h3>
+                <p>Leaves Remaining</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-right">
+        <h2>Profile Information</h2>
+        <label>Name:</label>
+        <input type="text" id="profileName">
+
+        <label>Email:</label>
+        <input type="email" id="profileEmail">
+
+        <label>Phone:</label>
+        <input type="text" id="profilePhone">
+
+        <label>Role:</label>
+        <input type="text" id="profileRole" disabled>
+
+        <label>Department:</label>
+        <input type="text" id="profileDept" disabled>
+
+        <button id="saveProfileBtn">Save Changes</button>
+    </div>
+</div>
+
+</main>
+</div>
+<script src="profile.js"></script>
+</body>
+</html>

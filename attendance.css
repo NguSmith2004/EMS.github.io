@@ -1,0 +1,26 @@
+/* Same sidebar/main layout as employees.css */
+table { width:100%; border-collapse: collapse; background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.05);}
+th, td { padding:14px; text-align:left; border-bottom:1px solid #eee; }
+th { background:#f7f7f7; }
+button { padding:6px 12px; border:none; border-radius:6px; cursor:pointer; margin-right:6px; }
+button.present { background:#1d976c; color:#fff; }
+button.absent { background:#ff4d4d; color:#fff; }
+#markAllPresent { margin-top:10px; padding:10px 20px; background:#1d976c; color:#fff; border-radius:8px; cursor:pointer; border:none; }
+
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .sidebar { display: none; position: absolute; z-index: 999; top: 0; left: 0; height: 100vh; background: #fff; width: 220px; }
+    .sidebar.show { display: block; }
+}

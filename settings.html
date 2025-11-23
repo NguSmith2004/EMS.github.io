@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Settings - EMS</title>
+<link rel="stylesheet" href="global-layout.css"> <!-- existing sidebar/layout CSS -->
+<link rel="stylesheet" href="settings.css"> <!-- page-specific CSS -->
+</head>
+<body>
+    <!-- Add in layout.html or each page -->
+<button id="menuToggle" class="menu-toggle">☰</button>
+
+<div class="container">
+<aside class="sidebar">
+    <h2>EMS</h2>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="employees.html">Employees</a>
+        <a href="add_employee.html">Add Employee</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="payroll.html">Payroll</a>
+        <a href="departments.html">Departments</a>
+        <a href="reports.html">Reports</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html" class="active">Settings</a>
+        <a href="#" id="logoutBtn" class="logout">Logout</a>
+    </nav>
+</aside>
+
+<main class="main-content">
+<h1>Settings</h1>
+
+<div class="settings-tabs">
+    <button class="tab-btn active" data-tab="profile">Profile</button>
+    <button class="tab-btn" data-tab="password">Password</button>
+    <button class="tab-btn" data-tab="notifications">Notifications</button>
+    <button class="tab-btn" data-tab="system">System</button>
+    <button class="tab-btn" data-tab="attendance">Attendance</button>
+</div>
+
+<!-- PROFILE -->
+<div class="tab-content" id="profile">
+    <h2>Profile Settings</h2>
+    <input type="text" id="setName" placeholder="Name">
+    <input type="email" id="setEmail" placeholder="Email">
+    <button id="saveProfile">Save</button>
+</div>
+
+<!-- PASSWORD -->
+<div class="tab-content" id="password" style="display:none;">
+    <h2>Change Password</h2>
+    <input type="password" id="currentPwd" placeholder="Current Password">
+    <input type="password" id="newPwd" placeholder="New Password">
+    <button id="savePassword">Change</button>
+</div>
+
+<!-- NOTIFICATIONS -->
+<div class="tab-content" id="notifications" style="display:none;">
+    <h2>Notification Settings</h2>
+    <label><input type="checkbox" id="emailNotif"> Email Notifications</label>
+    <label><input type="checkbox" id="inAppNotif"> In-App Notifications</label>
+    <button id="saveNotif">Save</button>
+</div>
+
+<!-- SYSTEM -->
+<div class="tab-content" id="system" style="display:none;">
+    <h2>System Preferences</h2>
+    <label>Theme:
+        <select id="themeSelect">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </label>
+    <button id="saveSystem">Save</button>
+</div>
+
+<!-- ATTENDANCE -->
+<div class="tab-content" id="attendance" style="display:none;">
+    <h2>Attendance Settings</h2>
+    <label>Working Hours:
+        <input type="number" id="workHours" value="8"> per day
+    </label>
+    <button id="saveAttendance">Save</button>
+</div>
+
+</main>
+</div>
+<script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reports - EMS</title>
+<link rel="stylesheet" href="reports.css">
+</head>
+<body>
+    <!-- Add in layout.html or each page -->
+<button id="menuToggle" class="menu-toggle">☰</button>
+
+<div class="container">
+<aside class="sidebar">
+<h2>EMS</h2>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="employees.html">Employees</a>
+<a href="add_employee.html">Add Employee</a>
+<a href="attendance.html">Attendance</a>
+<a href="payroll.html">Payroll</a>
+<a href="departments.html">Departments</a>
+<a href="reports.html" class="active">Reports</a>
+<a href="profile.html">Profile</a>
+<a href="settings.html">Settings</a>
+<a href="#" id="logoutBtn" class="logout">Logout</a>
+</nav>
+</aside>
+
+<main class="main-content">
+<h1>Reports</h1>
+<canvas id="reportChart"></canvas>
+</main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="reports.js"></script>
+</body>
+</html>

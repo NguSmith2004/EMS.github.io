@@ -1,0 +1,27 @@
+/* Sidebar + main content layout */
+body { margin:0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f4f5f7; }
+.container { display: flex; height: 100vh; }
+.sidebar { width: 220px; background: #fff; padding: 30px; box-shadow: 2px 0 12px rgba(0,0,0,0.1); }
+.sidebar h2 { margin-bottom: 30px; color: #1d976c; }
+.sidebar nav a { display:block; padding:10px 0; color:#333; text-decoration:none; margin-bottom:6px; transition:0.3s; }
+.sidebar nav a:hover, .sidebar nav a.active { color:#1d976c; font-weight:600; }
+.sidebar nav a.logout { margin-top:20px; color:#ff4d4d; }
+.main-content { flex:1; padding:30px; overflow-y:auto; }
+canvas { max-width:100%; background:#fff; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .sidebar { display: none; position: absolute; z-index: 999; top: 0; left: 0; height: 100vh; background: #fff; width: 220px; }
+    .sidebar.show { display: block; }
+}

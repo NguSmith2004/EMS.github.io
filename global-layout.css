@@ -1,0 +1,125 @@
+/* Global container layout */
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #fff;
+    padding: 30px 15px;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    color: #1d976c;
+}
+
+/* Sidebar nav */
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 6px;
+    transition: 0.3s;
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    color: #1d976c;
+    font-weight: 600;
+    background: rgba(29, 151, 108, 0.1);
+}
+
+.sidebar nav a.logout {
+    margin-top: 20px;
+    color: #ff4d4d;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    min-width: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+    }
+
+    .sidebar nav a {
+        margin: 0 10px 0 0;
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        padding: 15px;
+    }
+
+    .sidebar h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar nav {
+        flex-direction: column;
+        overflow-x: visible;
+    }
+
+    .sidebar nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .sidebar { display: none; position: absolute; z-index: 999; top: 0; left: 0; height: 100vh; background: #fff; width: 220px; }
+    .sidebar.show { display: block; }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Employee - EMS</title>
+<link rel="stylesheet" href="add_employee.css">
+<link rel="stylesheet" href="global-layout.css"> <!-- global sidebar/nav styles -->
+</head>
+<body>
+    <!-- Add in layout.html or each page -->
+<button id="menuToggle" class="menu-toggle">☰</button>
+
+<div class="container">
+<aside class="sidebar">
+<h2>EMS</h2>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="employees.html">Employees</a>
+<a href="add_employee.html" class="active">Add Employee</a>
+<a href="attendance.html">Attendance</a>
+<a href="payroll.html">Payroll</a>
+<a href="departments.html">Departments</a>
+<a href="reports.html">Reports</a>
+<a href="profile.html">Profile</a>
+<a href="settings.html">Settings</a>
+<a href="#" id="logoutBtn" class="logout">Logout</a>
+</nav>
+</aside>
+
+<main class="main-content">
+<h1>Add New Employee</h1>
+<form id="addEmployeeForm">
+    <div class="input-group"><input type="text" id="name" required><label>Name</label></div>
+    <div class="input-group"><input type="text" id="username" required><label>Username</label></div>
+    <div class="input-group"><input type="email" id="email" required><label>Email</label></div>
+    <div class="input-group"><input type="text" id="department" required><label>Department</label></div>
+    <button type="submit" class="btn-primary">Add Employee</button>
+</form>
+</main>
+</div>
+<script src="add_employee.js"></script>
+</body>
+</html>
